@@ -1,0 +1,20 @@
+## Gradle
+.gradle/
+gradle-app.setting
+/build/
+
+## IntelliJ
+.idea/
+.idea_modules/
+*.iml
+
+## Eclipse
+*.classpath
+*.history
+*.metadata
+*.project
+.settings/
+
+## Miscellaneous
+*.sublime-workspace
+.DS_Store

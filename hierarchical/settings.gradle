@@ -1,0 +1,11 @@
+///////////////////////////////////
+// Root Project Name and Settings
+
+rootProject.name = 'Hierarchical Template'
+
+///////////////////////////////////
+// Included Modules / Subprojects
+
+include 'core:core-utils'
+
+include 'apps:app-simpleapp'

@@ -1,0 +1,8 @@
+//////////////////////////////////////
+// Exported Global Project Variables
+ext.buildFiles = "${rootProject.projectDir.absolutePath}/gradle"
+ext.libsFiles  = "${rootProject.projectDir.absolutePath}/libs"
+
+////////////////////////////
+// Included Global Scripts
+apply from: "${buildFiles}/settings-deps.gradle"

@@ -1,0 +1,18 @@
+apply from: "${buildFiles}/settings-java.gradle"
+
+dependencies {
+	
+	// Normal maven dependency
+	compile 'org.jodd:jodd-bean:3.8.6'
+	
+	// Internal project dependency
+	compile project(':modules:core-utils')
+	
+	// /libs folder flat jar dependencies
+	compile deps['jodd-json-3.8.6']
+	
+	// Shared common dependency from settings-deps.gradle
+	testCompile deps.junit5
+	
+}
+

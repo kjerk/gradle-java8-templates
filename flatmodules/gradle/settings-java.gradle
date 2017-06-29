@@ -1,0 +1,32 @@
+/////////////////////////
+// Java Shared Settings
+
+apply from: "${buildFiles}/settings-repos.gradle"
+
+apply plugin: 'java'
+
+// These settings have been fickle in the past, so they're set directly, by type, and then directly on the applicable task.
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+	options.compilerArgs << '-parameters' << '-Xlint:unchecked'
+}
+
+compileJava {
+	options.fork = true
+	options.incremental = true
+	options.compilerArgs.add('-parameters')
+	options.compilerArgs.add('-Xlint:unchecked')
+}
+
+dependencies {
+	// This dependency is manually set here for resilience. Nobody should opt into this manually in a module as it has compilation requirements.
+	compileOnly 'org.projectlombok:lombok:1.16.16' // https://projectlombok.org/features/index.html | http://mvnrepository.com/artifact/org.projectlombok/lombok
+	
+	testCompile deps.junit5
+	testCompile deps.mockito
+	
+}

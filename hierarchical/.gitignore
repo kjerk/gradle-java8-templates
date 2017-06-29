@@ -1,0 +1,49 @@
+## Java Binaries
+*.class
+*.ear
+*.jar
+*.war
+
+## Gradle
+.gradle/
+gradle-app.setting
+
+## IntelliJ
+.idea/
+.idea_modules/
+*.iml
+
+## Eclipse
+*.classpath
+*.history
+*.metadata
+*.project
+.settings/
+
+## Build Systems
+**/dist/
+**/out/
+!**/layout
+**/node_modules/
+
+# Root Only
+/build/
+/target/
+
+# First Level Subdirs Only
+*/build/
+*/logs/
+*/target/
+
+## Miscellaneous
+*-SNAPSHOT.*
+*.csv
+*.dat
+*.gz
+*.log
+*.out
+*.pid
+*.seed
+*.sublime-workspace
+.DS_Store
+npm-debug.log

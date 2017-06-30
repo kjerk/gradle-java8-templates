@@ -13,7 +13,7 @@ Choose one subdirectory and use the structure and gradle techniques as a project
   dependency versions in submodules without using any gradle plugins.
 * Easy and automated top level `/libs/` folder: Some java dependencies are not in maven central, this directory is a dropbox for auto discoverable dependencies.
   The [settings-deps.gradle](flatmodules/gradle/settings-deps.gradle#L63-L67) file exposes each jar dropped in this file as a possible dependency.
-* Shared ([settings-java.gradle](flatmodules/settings-java.gradle)) file for java configuration. This makes any java module's build.gradle file
+* Shared ([settings-java.gradle](flatmodules/gradle/settings-java.gradle)) file for java configuration. This makes any java module's build.gradle file
   [extremely small](flatmodules/modules/app-simpleapp/build.gradle#L1), as they can share java config. Sweeping project changes go in the shared file, and
   module specific granularity changes can go in the module's build.gradle file (yay no repetition!).
 * Shared [repositories](flatmodules/gradle/settings-repos.gradle) declaration. It's 99.9% of the time this is a whole project on-or-off mechanism, so extract it.

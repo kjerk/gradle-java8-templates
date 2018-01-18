@@ -1,11 +1,9 @@
 ///////////////////////////////////
 // Root Project Name and Settings
-
-rootProject.name = 'Flatmodules Template'
+rootProject.name = 'ProjectName'
 
 ///////////////////////////////////
 // Included Modules / Subprojects
-
-include 'modules:core-utils'
-
-include 'modules:app-simpleapp'
+new File('./modules/').eachDir {
+	include 'modules:' + it.name
+}

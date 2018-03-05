@@ -26,37 +26,6 @@ ext.deps = [
 	guice: [
 		'com.google.inject:guice:4.1.0:no_aop',                  // https://github.com/google/guice/
 		'com.google.inject.extensions:guice-multibindings:4.1.0' // https://github.com/google/guice/wiki/Multibindings
-	],
-	jackson: [
-		'com.fasterxml.jackson.core:jackson-databind:2.8.9',
-		'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.9',  // https://github.com/FasterXML/jackson-datatype-jsr310
-		'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.8.9',    // https://github.com/FasterXML/jackson-datatype-jdk8
-		'com.fasterxml.jackson.module:jackson-module-afterburner:2.8.9', // https://github.com/FasterXML/jackson-modules-base/tree/master/afterburner
-		'com.xebia:jackson-lombok:1.1'                                   // https://github.com/xebia/jackson-lombok
-	],
-	junit5: [
-		'org.junit.jupiter:junit-jupiter-api:5.0.0-M4',      // http://junit.org/junit5/docs/current/user-guide/
-		'org.junit.jupiter:junit-jupiter-engine:5.0.0-M4',
-		//'org.junit.vintage:junit-vintage-engine:4.12.0-M4', // Re-enable to get junit4 back
-		//'org.junit.platform:junit-platform-console:1.0.0-M4' // Re-enable to get junit5 tests from the command line
-	],
-	junit4: [
-		'junit:junit:4.12'                                   // http://mvnrepository.com/artifact/junit/junit/4.12
-	],
-	log4j: [ // This is the required dependency list to allow asynchronous Log4j2 (w/ disruptor) to autobind to SLF4j.
-		'org.slf4j:log4j-over-slf4j:1.7.22',                 // https://www.slf4j.org/legacy.html#log4j-over-slf4j
-		'org.apache.logging.log4j:log4j-slf4j-impl:2.7',     // https://logging.apache.org/log4j/2.0/runtime-dependencies.html#log4j-slf4j-impl
-		'org.apache.logging.log4j:log4j-core:2.7',           // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core/2.7
-		'com.lmax:disruptor:3.3.5'                           // https://logging.apache.org/log4j/2.x/manual/async.html#Making_All_Loggers_Asynchronous
-	],
-	mockito: [
-		'org.mockito:mockito-core:2.8.47'                    // http://static.javadoc.io/org.mockito/mockito-core/2.7.6/org/mockito/Mockito.html
-	],
-	okHttp: [
-		'com.squareup.okhttp3:okhttp:3.3.0'                  // http://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp/3.3.0
-	],
-	slf4j: [
-		'org.slf4j:slf4j-api:1.7.22'                         // https://www.slf4j.org/manual.html
 	]
 ]
 
